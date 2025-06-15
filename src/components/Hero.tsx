@@ -1,4 +1,3 @@
-
 import React from "react";
 import HeroLogo from "./HeroLogo";
 import HeroCard from "./HeroCard";
@@ -11,12 +10,11 @@ const heroBgDiamond = `repeating-linear-gradient(
   ),
   linear-gradient(135deg, #fffde4 0%, #ffd600 100%)`;
 
-const menImg =
-  "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=facearea&w=400&q=80&facepad=3.5";
+const menImg = "/lovable-uploads/712fefe1-b5d4-4a31-9499-ca460f8f2ed2.png";
+
 const womenImg =
   "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=facearea&w=400&q=80&facepad=3.5";
 
-// Character cutouts: These are placeholders, arrange as absolute images. 
 const characters = [
   {
     src: "https://pngimg.com/uploads/deadpool/deadpool_PNG65.png",
@@ -64,21 +62,14 @@ const Hero: React.FC = () => (
       <span className="uppercase font-bold text-[1.05em] text-black/95 mt-6 sm:mt-8 tracking-widest text-base sm:text-lg letter-spacing-[.14em] opacity-80">SHOP FOR</span>
     </div>
     
-    {/* Cards */}
+    {/* MEN Card only */}
     <div className="w-full flex flex-row justify-center gap-6 sm:gap-12 mt-8 sm:mt-12 px-3 sm:px-0 z-10">
-      <div className="flex w-full max-w-2xl gap-4 sm:gap-12 mx-auto flex-col sm:flex-row">
+      <div className="flex w-full max-w-xs gap-4 sm:gap-12 mx-auto flex-col">
         <HeroCard
           label="MEN"
           image={menImg}
-          alt="Men's fashion model"
+          alt="Bodybuilding guy wearing gym tshirt"
           delay={0}
-        />
-        <HeroCard
-          label="WOMEN"
-          image={womenImg}
-          alt="Women's fashion model"
-          delay={0.12}
-          reverse
         />
       </div>
     </div>
@@ -107,7 +98,7 @@ const Hero: React.FC = () => (
       ))}
     </div>
 
-    {/* Grid overlay for extra patterning (optional, but subtle) */}
+    {/* Grid overlay for extra patterning */}
     <div className="absolute inset-0 pointer-events-none z-0">
       <svg width="100%" height="100%" className="absolute inset-0" style={{ mixBlendMode: "overlay" }}>
         <defs>
