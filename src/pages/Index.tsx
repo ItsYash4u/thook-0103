@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 
 const bgImg =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmiDg-tYr3_YRRIf0ueN2eHckhD6s3QaseCQ&s";
+  "https://i.pinimg.com/736x/dc/f6/b6/dcf6b63ef458829db39368d5ecadab82.jpg";
 
 const Index = () => {
   return (
@@ -25,3 +25,4 @@ const Index = () => {
 };
 
 export default Index;
+
