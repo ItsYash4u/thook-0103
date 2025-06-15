@@ -18,7 +18,7 @@ const ShinyButton: React.FC<React.ComponentProps<typeof Button> & { children: Re
   className = "",
   ...props
 }) => (
-  <span className="relative group inline-block w-full">
+  <span className="relative group inline-block">
     <Button
       {...props}
       className={
@@ -34,7 +34,7 @@ const ShinyButton: React.FC<React.ComponentProps<typeof Button> & { children: Re
       <span className="shine-effect pointer-events-none"></span>
     </Button>
     {/* Extra styles for the shine effect */}
-    <style jsx>{`
+    <style>{`
       .shine-btn {
         position: relative;
       }
@@ -104,17 +104,19 @@ const HeroCard: React.FC<HeroCardProps> = ({
         draggable={false}
       />
     </div>
-    <ShinyButton
-      tabIndex={0}
-      onClick={() => {
-        // For now, navigate to /men
-        window.location.href = "/men";
-      }}
-    >
-      {label}
-    </ShinyButton>
+    {/* Center the button horizontally */}
+    <div className="flex justify-center w-full">
+      <ShinyButton
+        tabIndex={0}
+        onClick={() => {
+          // For now, navigate to /men
+          window.location.href = "/men";
+        }}
+      >
+        {label}
+      </ShinyButton>
+    </div>
   </motion.div>
 );
 
 export default HeroCard;
-
