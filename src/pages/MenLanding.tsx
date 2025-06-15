@@ -2,9 +2,9 @@
 import React from "react";
 import MenSectionCard from "../components/MenSectionCard";
 
-// Frame image extracted from Pinterest pin
+// Updated background image from user
 const backgroundUrl =
-  "https://i.pinimg.com/originals/cb/2c/71/cb2c71a82f8c3282b01d1a99ab0bafa6.png";
+  "https://i.pinimg.com/736x/bd/26/16/bd26168c4f474b86210733717636dffd.jpg";
 
 const MEN_OPTIONS = [
   {
