@@ -9,37 +9,54 @@ const menImg = "https://t3.ftcdn.net/jpg/06/57/49/32/240_F_657493201_YFfoGwIqaAF
 
 // BG image for half-hero
 const halfBgImg = "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80";
-const Hero: React.FC = () => <section className="relative overflow-hidden min-h-[670px] flex flex-col justify-start items-center" style={{
-  backgroundImage: yellowGridBg,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  boxShadow: "inset 0 -40px 60px -10px rgba(255,214,0,0.13)"
-}}>
+const Hero: React.FC = () => (
+  <section
+    className="relative overflow-hidden min-h-[670px] flex flex-col justify-start items-center"
+    style={{
+      backgroundImage: yellowGridBg,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      boxShadow: "inset 0 -40px 60px -10px rgba(255,214,0,0.13)",
+    }}
+  >
     {/* Left half background image for desktop */}
-    <div className="hidden lg:block absolute top-0 left-0 h-full w-1/2 z-0" style={{
-    backgroundImage: `linear-gradient(to right,rgba(44,44,0,0.15) 30%,rgba(255,214,0,0.05) 100%), url('${halfBgImg}')`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    opacity: 0.82,
-    pointerEvents: "none"
-  }} aria-hidden="true" />
+    <div
+      className="hidden lg:block absolute top-0 left-0 h-full w-1/2 z-0"
+      style={{
+        backgroundImage: `linear-gradient(to right,rgba(44,44,0,0.15) 30%,rgba(255,214,0,0.05) 100%), url('${halfBgImg}')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        opacity: 0.82,
+        pointerEvents: "none",
+      }}
+      aria-hidden="true"
+    />
     {/* Center / brand */}
     <div className="w-full flex flex-col items-center mt-12 sm:mt-20 relative z-10">
-      <span className="font-hero text-5xl sm:text-6xl font-black tracking-[0.14em] px-7 py-2 rounded bg-transparent text-black drop-shadow-md select-none">THOOK</span>
-      <span className="block font-black uppercase mt-4 sm:mt-7 text-[1.45em] sm:text-2xl tracking-[0.22em] text-black/95"> ONLY FOR</span>
+      <span className="font-hero text-5xl sm:text-6xl font-black tracking-[0.14em] px-7 py-2 rounded bg-transparent text-black drop-shadow-md select-none">
+        THOOK
+      </span>
+      <span className="block font-black uppercase mt-4 sm:mt-7 text-[1.45em] sm:text-2xl tracking-[0.22em] text-black/95">
+        {" ONLY FOR"}
+      </span>
     </div>
 
     {/* MEN Card only */}
     <div className="relative z-10 w-full flex flex-row justify-center gap-12 mt-9 sm:mt-12 px-4">
       <HeroCard label="MEN" image={menImg} alt="Men Section" delay={0} gridBorder />
     </div>
-    
-    {/* Bottom Titles */}
-    <div className="w-full flex flex-col items-center z-40 select-none px-3 absolute bottom-12 sm:bottom-14">
-      <h2 className="font-black text-2xl sm:text-3xl text-black/90 tracking-[0.18em] mb-1 uppercase leading-snug opacity-95 drop-shadow-lg text-center">
-        ALL EYES <span className="text-[#ffd600]">ON REAL MEN</span>
+
+    {/* Bottom Titles - repositioned below the MEN card */}
+    <div className="w-full flex flex-col items-center z-40 select-none px-3 mt-12 sm:mt-16 mb-5">
+      <h2 className="font-black text-2xl sm:text-3xl tracking-[0.18em] mb-1 uppercase leading-snug opacity-95 drop-shadow-lg text-center">
+        <span className="text-[#ffd600]">ALL EYES O</span>
+        <span className="text-black">N REAL MEN</span>
       </h2>
-      <p className="max-w-xl text-center text-base sm:text-lg text-black/90 tracking-wide mt-2 opacity-95 font-medium">Home grown brand. Loved since 2025.</p>
+      <p className="max-w-xl text-center text-base sm:text-lg text-black/90 tracking-wide mt-2 opacity-95 font-medium">
+        Home grown brand. Loved since 2025.
+      </p>
     </div>
-  </section>;
+  </section>
+);
+
 export default Hero;
