@@ -1,27 +1,17 @@
+
 import React from "react";
 import HeroCard from "./HeroCard";
-
-// Character strips (images)
-const bottomCharacters = [
-  "https://www.bewakoof.com/cdn/shop/files/demon_slayer.webp",
-  "https://www.bewakoof.com/cdn/shop/files/deadpool.webp",
-  "https://www.bewakoof.com/cdn/shop/files/wolverine.webp",
-  "https://www.bewakoof.com/cdn/shop/files/spongebob.webp",
-  "https://www.bewakoof.com/cdn/shop/files/blackpanther.webp",
-  "https://www.bewakoof.com/cdn/shop/files/tomandjerry.webp",
-  "https://www.bewakoof.com/cdn/shop/files/drdoom.webp",
-  "https://www.bewakoof.com/cdn/shop/files/minion.webp",
-  "https://www.bewakoof.com/cdn/shop/files/luffy.webp",
-  "https://www.bewakoof.com/cdn/shop/files/moonknight.webp",
-  "https://www.bewakoof.com/cdn/shop/files/naruto.webp",
-];
 
 // Custom yellow grid background SVG as base64
 const yellowGridBg = `url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="700" fill="url(%23a)" /><defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1" gradientTransform="rotate(135 0.5 0.5)"><stop offset="0" stop-color="%23fffde4"/><stop offset="1" stop-color="%23ffd600"/></linearGradient></defs><g stroke="%23fff7bc" stroke-width="3" opacity="0.6"><path d="M0 100h1200"/><path d="M0 200h1200"/><path d="M0 300h1200"/><path d="M0 400h1200"/><path d="M0 500h1200"/><path d="M0 600h1200"/><path d="M0 700h1200"/><path d="M100 0v700"/><path d="M200 0v700"/><path d="M300 0v700"/><path d="M400 0v700"/><path d="M500 0v700"/><path d="M600 0v700"/><path d="M700 0v700"/><path d="M800 0v700"/><path d="M900 0v700"/><path d="M1000 0v700"/><path d="M1100 0v700"/></g></svg>')`;
 
-// Use the new image for MEN card
+// MEN image for the card
 const menImg =
-  "https://t3.ftcdn.net/jpg/06/57/49/32/240_F_657493201_YFfoGwIqaAFI42aibCDnwTxbBUYWI67g.jpg"; // updated image
+  "https://t3.ftcdn.net/jpg/06/57/49/32/240_F_657493201_YFfoGwIqaAFI42aibCDnwTxbBUYWI67g.jpg";
+
+// Marvel Universe group image for the bottom
+const marvelGroupImg =
+  "https://static.wikia.nocookie.net/marveldatabase/images/e/e1/The_Marvel_Universe.png/revision/latest/scale-to-width-down/630?cb=20110513164401";
 
 const Hero: React.FC = () => (
   <section
@@ -50,20 +40,15 @@ const Hero: React.FC = () => (
       />
     </div>
     
-    {/* Hero foreground: character images (visible at bottom) */}
-    <div className="absolute inset-x-0 bottom-0 z-30 flex justify-center items-end h-52 lg:h-60 select-none pointer-events-none">
-      <div className="flex flex-row gap-2 items-end h-full">
-        {bottomCharacters.map((img, i) => (
-          <img
-            key={i}
-            src={img}
-            alt={`character${i + 1}`}
-            className="h-full object-contain"
-            style={{ maxHeight: '100%', minHeight: 90, marginBottom: 0, zIndex: 10 + i }}
-            draggable={false}
-          />
-        ))}
-      </div>
+    {/* Hero foreground: Marvel Universe image at the bottom */}
+    <div className="absolute inset-x-0 bottom-0 z-30 flex justify-center items-end h-48 sm:h-60 lg:h-72 select-none pointer-events-none">
+      <img
+        src={marvelGroupImg}
+        alt="Marvel Universe Group"
+        className="object-contain h-full max-h-full mx-auto"
+        style={{ minHeight: 90, marginBottom: 0 }}
+        draggable={false}
+      />
     </div>
     {/* Bottom Titles */}
     <div className="w-full flex flex-col items-center z-40 select-none px-3 absolute bottom-12 sm:bottom-14">
