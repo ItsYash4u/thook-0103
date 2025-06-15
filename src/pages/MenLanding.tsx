@@ -1,10 +1,9 @@
-
 import React from "react";
 import MenSectionCard from "../components/MenSectionCard";
 
 // Pinterest background image for frame area behind the cards
 const backgroundUrl =
-  "https://i.pinimg.com/736x/bd/26/16/bd26168c4f474b86210733717636dffd.jpg";
+  "https://i.pinimg.com/736x/95/45/4a/95454a0bfb23e0ef73a1533f13c4c980.jpg";
 
 const MEN_OPTIONS = [
   {
