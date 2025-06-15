@@ -38,16 +38,6 @@ const Hero: React.FC = () => (
       boxShadow: "inset 0 -40px 60px -10px rgba(255,214,0,0.13)",
     }}
   >
-    {/* Aditya Birla logo (top right) */}
-    <a
-      href="#"
-      className="absolute top-7 right-7 z-20"
-      aria-label="Aditya Birla"
-      style={{ width: 70, height: 50 }}
-    >
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Aditya_Birla_Group_Logo.svg/2560px-Aditya_Birla_Group_Logo.svg.png" alt="Aditya Birla logo" className="w-16 h-10 object-contain" />
-    </a>
-
     {/* Center / brand */}
     <div className="w-full flex flex-col items-center mt-12 sm:mt-20 relative z-10">
       <span className="font-hero text-5xl sm:text-6xl font-black tracking-[0.14em] px-7 py-2 rounded bg-transparent text-black drop-shadow-md select-none">THOOK</span>
@@ -100,3 +90,4 @@ const Hero: React.FC = () => (
 );
 
 export default Hero;
+
