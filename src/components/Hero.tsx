@@ -1,5 +1,6 @@
 import React from "react";
 import HeroCard from "./HeroCard";
+import { Link } from "react-router-dom";
 
 // Custom yellow grid background SVG as base64
 const yellowGridBg = `url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="700" fill="url(%23a)" /><defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1" gradientTransform="rotate(135 0.5 0.5)"><stop offset="0" stop-color="%23fffde4"/><stop offset="1" stop-color="%23ffd600"/></linearGradient></defs><g stroke="%23fff7bc" stroke-width="3" opacity="0.6"><path d="M0 100h1200"/><path d="M0 200h1200"/><path d="M0 300h1200"/><path d="M0 400h1200"/><path d="M0 500h1200"/><path d="M0 600h1200"/><path d="M0 700h1200"/><path d="M100 0v700"/><path d="M200 0v700"/><path d="M300 0v700"/><path d="M400 0v700"/><path d="M500 0v700"/><path d="M600 0v700"/><path d="M700 0v700"/><path d="M800 0v700"/><path d="M900 0v700"/><path d="M1000 0v700"/><path d="M1100 0v700"/></g></svg>')`;
@@ -37,14 +38,14 @@ const Hero: React.FC = () => (
         THOOK
       </span>
       <span className="block font-black uppercase mt-4 sm:mt-7 text-[1.45em] sm:text-2xl tracking-[0.22em] text-black/95">
-        {" ONLY FOR"}
+        {" ONLY FOR"}
       </span>
     </div>
 
     {/* MEN Card only */}
-    <div className="relative z-10 w-full flex flex-row justify-center gap-12 mt-9 sm:mt-12 px-4">
+    <Link to="/products" className="relative z-10 w-full flex flex-row justify-center gap-12 mt-9 sm:mt-12 px-4">
       <HeroCard label="MEN" image={menImg} alt="Men Section" delay={0} gridBorder />
-    </div>
+    </Link>
 
     {/* Bottom Titles - repositioned below the MEN card */}
     <div className="w-full flex flex-col items-center z-40 select-none px-3 mt-12 sm:mt-16 mb-5">
