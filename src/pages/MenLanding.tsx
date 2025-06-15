@@ -44,6 +44,12 @@ const MenLanding: React.FC = () => {
         backgroundColor: "black",
       }}
     >
+      {/* Fixed brand name in top-left */}
+      <div className="fixed top-4 left-5 z-50 select-none pointer-events-none">
+        <span className="font-extrabold text-white text-3xl sm:text-4xl tracking-wide uppercase font-sans drop-shadow-lg" style={{ letterSpacing: ".13em" }}>
+          THOOK
+        </span>
+      </div>
       <section className="relative flex flex-col items-center w-full px-3">
         <h1 className="font-black text-4xl sm:text-5xl text-white tracking-[0.13em] mt-10 mb-7 drop-shadow-xl uppercase z-10">
           SELECT YOUR TYPE
