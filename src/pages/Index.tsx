@@ -1,11 +1,18 @@
-// Update this page (the content is just a fallback if you fail to update the page)
 
+import Header from "../components/Header";
 import Hero from "../components/Hero";
+import Categories from "../components/Categories";
+import FeaturedProducts from "../components/FeaturedProducts";
+import Footer from "../components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen w-full bg-background flex flex-col items-center">
+    <div className="min-h-screen w-full bg-background">
+      <Header />
       <Hero />
+      <Categories />
+      <FeaturedProducts />
+      <Footer />
     </div>
   );
 };

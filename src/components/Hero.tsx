@@ -6,6 +6,7 @@ import HeroCard from "./HeroCard";
 const heroBgDiamond = `linear-gradient(135deg, #fffde4 0%, #ffd600 100%)`;
 
 const menImg = "/lovable-uploads/712fefe1-b5d4-4a31-9499-ca460f8f2ed2.png";
+const womenImg = "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop";
 
 const Hero: React.FC = () => (
   <section
@@ -23,15 +24,23 @@ const Hero: React.FC = () => (
         SHOP FOR
       </span>
     </div>
-    {/* Card */}
-    <div className="w-full flex flex-row justify-center mt-10 sm:mt-14 px-4 z-10">
+    
+    {/* Cards */}
+    <div className="w-full flex flex-row justify-center gap-8 mt-10 sm:mt-14 px-4 z-10">
       <HeroCard
         label="MEN"
         image={menImg}
         alt="Bodybuilding guy wearing gym tshirt"
         delay={0}
       />
+      <HeroCard
+        label="WOMEN"
+        image={womenImg}
+        alt="Woman in fashionable outfit"
+        delay={0.2}
+      />
     </div>
+    
     {/* Bottom Titles */}
     <div className="w-full flex flex-col items-center mt-14 sm:mt-16 select-none z-10 px-3">
       <h2 className="font-black text-2xl sm:text-3xl text-black/90 tracking-[0.18em] mb-0 leading-snug uppercase opacity-95">
@@ -41,7 +50,6 @@ const Hero: React.FC = () => (
         Step into the world of iconic pop culture, superhero, and cartoon fashion. Love anime, comics, superheroes, or just want to stand out? Get noticed with our exclusive collection.
       </p>
     </div>
-    {/* No character cutouts or grid overlays */}
   </section>
 );
 
