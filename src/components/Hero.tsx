@@ -48,9 +48,28 @@ const Hero: React.FC = () => (
 
     {/* Bottom Titles - repositioned below the MEN card */}
     <div className="w-full flex flex-col items-center z-40 select-none px-3 mt-12 sm:mt-16 mb-5">
-      <h2 className="font-black text-2xl sm:text-3xl tracking-[0.18em] mb-1 uppercase leading-snug opacity-95 drop-shadow-lg text-center">
+      <h2 className="font-black text-2xl sm:text-3xl tracking-[0.18em] mb-1 uppercase leading-snug opacity-95 drop-shadow-lg text-center flex flex-wrap items-center justify-center">
         <span className="text-[#ffd600]">ALL EYES O</span>
-        <span className="text-black">N REAL MEN</span>
+        {/* Custom half-yellow, half-black 'N' */}
+        <span
+          aria-label="N"
+          className="relative mx-[0.02em] inline-flex w-[1.09em] h-[1em] align-middle"
+          style={{ minWidth: "1.1em" }}
+        >
+          <span
+            className="absolute left-0 top-0 w-1/2 h-full overflow-hidden"
+            style={{ zIndex: 2 }}
+          >
+            <span className="text-[#ffd600] block w-full h-full" style={{ WebkitTextStroke: "0.8px #ffd600" }}>N</span>
+          </span>
+          <span
+            className="absolute right-0 top-0 w-1/2 h-full overflow-hidden"
+            style={{ zIndex: 2 }}
+          >
+            <span className="text-black block w-full h-full" style={{ WebkitTextStroke: "0.8px #000" }}>N</span>
+          </span>
+        </span>
+        <span className="text-black"> REAL MEN</span>
       </h2>
       <p className="max-w-xl text-center text-base sm:text-lg text-black/90 tracking-wide mt-2 opacity-95 font-medium">
         Home grown brand. Loved since 2025.
