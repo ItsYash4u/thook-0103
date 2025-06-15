@@ -16,8 +16,6 @@ const Header = () => {
         {/* Navigation */}
         <nav className="flex-1 flex justify-center space-x-8 ml-3">
           <a href="#" className="text-black font-semibold text-base hover:text-yellow-600 transition">MEN</a>
-          <a href="#" className="text-black font-semibold text-base hover:text-yellow-600 transition">WOMEN</a>
-          <a href="#" className="text-black font-semibold text-base hover:text-yellow-600 transition">MOBILE COVERS</a>
         </nav>
         {/* Search & Actions */}
         <div className="flex items-center gap-4 ml-auto">

@@ -9,10 +9,6 @@ const yellowGridBg = `url('data:image/svg+xml;utf8,<svg width="100%" height="100
 const menImg =
   "https://t3.ftcdn.net/jpg/06/57/49/32/240_F_657493201_YFfoGwIqaAFI42aibCDnwTxbBUYWI67g.jpg";
 
-// Marvel Universe group image for the bottom
-const marvelGroupImg =
-  "https://static.wikia.nocookie.net/marveldatabase/images/e/e1/The_Marvel_Universe.png/revision/latest/scale-to-width-down/630?cb=20110513164401";
-
 // BG image for half-hero
 const halfBgImg =
   "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80";
@@ -56,16 +52,6 @@ const Hero: React.FC = () => (
       />
     </div>
     
-    {/* Hero foreground: Marvel Universe image at the bottom */}
-    <div className="absolute inset-x-0 bottom-0 z-30 flex justify-center items-end h-48 sm:h-60 lg:h-72 select-none pointer-events-none">
-      <img
-        src={marvelGroupImg}
-        alt="Marvel Universe Group"
-        className="object-contain h-full max-h-full mx-auto"
-        style={{ minHeight: 90, marginBottom: 0 }}
-        draggable={false}
-      />
-    </div>
     {/* Bottom Titles */}
     <div className="w-full flex flex-col items-center z-40 select-none px-3 absolute bottom-12 sm:bottom-14">
       <h2 className="font-black text-2xl sm:text-3xl text-black/90 tracking-[0.18em] mb-1 uppercase leading-snug opacity-95 drop-shadow-lg text-center">
