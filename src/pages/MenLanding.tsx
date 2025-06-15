@@ -2,8 +2,9 @@
 import React from "react";
 import MenSectionCard from "../components/MenSectionCard";
 
+// Frame image extracted from Pinterest pin
 const backgroundUrl =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa7AKRaV1zJvgGaxIhXL8iletMUpQcQ8HIpQ&s";
+  "https://i.pinimg.com/originals/cb/2c/71/cb2c71a82f8c3282b01d1a99ab0bafa6.png";
 
 const MEN_OPTIONS = [
   {
@@ -54,3 +55,4 @@ const MenLanding: React.FC = () => {
 };
 
 export default MenLanding;
+
