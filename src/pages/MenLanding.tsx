@@ -1,4 +1,3 @@
-
 import React from "react";
 import MenSectionCard from "../components/MenSectionCard";
 import { useNavigate } from "react-router-dom";
@@ -44,11 +43,17 @@ const MenLanding: React.FC = () => {
         backgroundColor: "black",
       }}
     >
-      {/* Fixed brand name in top-left */}
+      {/* Fixed brand name in top-left, style matches Header/HeroLogo */}
       <div className="fixed top-4 left-5 z-50 select-none pointer-events-none">
-        <span className="font-extrabold text-white text-3xl sm:text-4xl tracking-wide uppercase font-sans drop-shadow-lg" style={{ letterSpacing: ".13em" }}>
+        <div
+          className="font-hero text-3xl sm:text-4xl font-black tracking-[0.12em] px-4 sm:px-6 py-2 rounded bg-[#FFD600] text-black shadow-lg border-2 border-black inline-block"
+          style={{
+            letterSpacing: "0.13em",
+            lineHeight: 1.16,
+          }}
+        >
           THOOK
-        </span>
+        </div>
       </div>
       <section className="relative flex flex-col items-center w-full px-3">
         <h1 className="font-black text-4xl sm:text-5xl text-white tracking-[0.13em] mt-10 mb-7 drop-shadow-xl uppercase z-10">
