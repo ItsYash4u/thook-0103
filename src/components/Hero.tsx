@@ -13,6 +13,10 @@ const menImg =
 const marvelGroupImg =
   "https://static.wikia.nocookie.net/marveldatabase/images/e/e1/The_Marvel_Universe.png/revision/latest/scale-to-width-down/630?cb=20110513164401";
 
+// BG image for half-hero
+const halfBgImg =
+  "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80";
+
 const Hero: React.FC = () => (
   <section
     className="relative overflow-hidden min-h-[670px] flex flex-col justify-start items-center"
@@ -23,6 +27,18 @@ const Hero: React.FC = () => (
       boxShadow: "inset 0 -40px 60px -10px rgba(255,214,0,0.13)",
     }}
   >
+    {/* Left half background image for desktop */}
+    <div
+      className="hidden lg:block absolute top-0 left-0 h-full w-1/2 z-0"
+      style={{
+        backgroundImage: `linear-gradient(to right,rgba(44,44,0,0.15) 30%,rgba(255,214,0,0.05) 100%), url('${halfBgImg}')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        opacity: 0.82,
+        pointerEvents: "none",
+      }}
+      aria-hidden="true"
+    />
     {/* Center / brand */}
     <div className="w-full flex flex-col items-center mt-12 sm:mt-20 relative z-10">
       <span className="font-hero text-5xl sm:text-6xl font-black tracking-[0.14em] px-7 py-2 rounded bg-transparent text-black drop-shadow-md select-none">THOOK</span>
