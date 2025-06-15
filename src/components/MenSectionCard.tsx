@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 // Simple shine effect for neon yellow button, matching homepage card
@@ -89,8 +88,6 @@ const MenSectionCard: React.FC<MenSectionCardProps> = ({
     if (onClick) {
       onClick();
     }
-    // Add your animation/loading logic, then navigate as needed
-    // For now, just simulate a load for 1s
     setTimeout(() => setLoading(false), 1100);
   };
 
@@ -113,7 +110,6 @@ const MenSectionCard: React.FC<MenSectionCardProps> = ({
       </div>
       {loading && (
         <div className="absolute left-0 top-0 w-full h-full flex items-center justify-center z-30 bg-[#fffef8eb] rounded-xl">
-          {/* Simple Loading Dots, you can replace with T-shirt loading if needed */}
           <span className="font-black text-black text-lg tracking-widest animate-pulse">Loading...</span>
         </div>
       )}
