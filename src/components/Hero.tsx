@@ -1,4 +1,3 @@
-
 import React from "react";
 import HeroCard from "./HeroCard";
 
@@ -20,8 +19,9 @@ const bottomCharacters = [
 // Custom yellow grid background SVG as base64
 const yellowGridBg = `url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="700" fill="url(%23a)" /><defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1" gradientTransform="rotate(135 0.5 0.5)"><stop offset="0" stop-color="%23fffde4"/><stop offset="1" stop-color="%23ffd600"/></linearGradient></defs><g stroke="%23fff7bc" stroke-width="3" opacity="0.6"><path d="M0 100h1200"/><path d="M0 200h1200"/><path d="M0 300h1200"/><path d="M0 400h1200"/><path d="M0 500h1200"/><path d="M0 600h1200"/><path d="M0 700h1200"/><path d="M100 0v700"/><path d="M200 0v700"/><path d="M300 0v700"/><path d="M400 0v700"/><path d="M500 0v700"/><path d="M600 0v700"/><path d="M700 0v700"/><path d="M800 0v700"/><path d="M900 0v700"/><path d="M1000 0v700"/><path d="M1100 0v700"/></g></svg>')`;
 
-// New bodybuilder image for MEN card (royalty-free from Unsplash)
-const menImg = "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=400&q=80"; // bodybuilder in gym t-shirt
+// Use the new image for MEN card
+const menImg =
+  "https://t3.ftcdn.net/jpg/06/57/49/32/240_F_657493201_YFfoGwIqaAFI42aibCDnwTxbBUYWI67g.jpg"; // updated image
 
 const Hero: React.FC = () => (
   <section
