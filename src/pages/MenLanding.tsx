@@ -5,28 +5,20 @@ import MenSectionCard from "../components/MenSectionCard";
 const backgroundUrl =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa7AKRaV1zJvgGaxIhXL8iletMUpQcQ8HIpQ&s";
 
-// Provided base64 images
-const ANIME_IMG =
-  "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSERIVFRUXFRUV..."; // (truncated for clarity)
-const SPARTANS_IMG =
-  "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFRUXGBcY..."; // (truncated for clarity)
-const MARVEL_IMG =
-  "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMWFhUWFxUV..."; // (truncated for clarity)
-
 const MEN_OPTIONS = [
   {
     label: "Anime",
-    image: ANIME_IMG,
+    image: "https://i.pinimg.com/736x/2c/cb/f6/2ccbf6d629250ab2f096d84558b6be12.jpg",
     alt: "Anime Section",
   },
   {
     label: "Spartans",
-    image: SPARTANS_IMG,
+    image: "https://i.pinimg.com/736x/db/ff/7b/dbff7b7fce0abf787fc72667c4ce7502.jpg",
     alt: "Spartans Section",
   },
   {
     label: "Marvel",
-    image: MARVEL_IMG,
+    image: "https://i.pinimg.com/736x/06/35/b2/0635b212f849e46d4b191cf5833d69c7.jpg",
     alt: "Marvel Section",
   },
 ];
