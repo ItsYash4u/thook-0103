@@ -1,11 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import { Heart, ShoppingCart } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import ProductFilter from '../components/ProductFilter';
+import CheckoutModal from '../components/CheckoutModal';
 import { useToast } from '@/hooks/use-toast';
 import CartDropdown from '../components/CartDropdown';
 import PaymentModal from '../components/PaymentModal';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 // Dummy product data
 const DUMMY_PRODUCTS = [
@@ -157,6 +159,11 @@ const Products = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
   const [paymentCompleteMsg, setPaymentCompleteMsg] = useState<string | null>(null);
+  
+  // New state for Buy Now functionality
+  const [showCheckout, setShowCheckout] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const navigate = useNavigate();
 
   const query = useQuery();
   const rawCategory = query.get('category');
@@ -223,6 +230,17 @@ const Products = () => {
       setIsLoading(false);
       setHasMore(false);
     }, 1000);
+  };
+
+  // New Buy Now handler
+  const handleBuyNow = (product: any) => {
+    setSelectedProduct(product);
+    setShowCheckout(true);
+  };
+
+  const handleOrderComplete = (orderDetails: any) => {
+    setShowCheckout(false);
+    navigate('/order-confirmation', { state: orderDetails });
   };
 
   // Payment handling
@@ -294,6 +312,7 @@ const Products = () => {
                 isLiked={likedProducts.includes(product.id)}
                 onLike={() => handleLike(product.id)}
                 onAddToCart={() => handleAddToCart(product.id, product.name)}
+                onBuyNow={() => handleBuyNow(product)}
               />
             ))}
           </div>
@@ -309,6 +328,16 @@ const Products = () => {
                 {isLoading ? 'Loading...' : 'Load More'}
               </button>
             </div>
+          )}
+
+          {/* Checkout Modal */}
+          {selectedProduct && (
+            <CheckoutModal
+              open={showCheckout}
+              onClose={() => setShowCheckout(false)}
+              product={selectedProduct}
+              onOrderComplete={handleOrderComplete}
+            />
           )}
 
           {/* Payment Modal */}
