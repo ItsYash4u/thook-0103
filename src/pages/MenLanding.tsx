@@ -1,3 +1,4 @@
+
 import React from "react";
 import MenSectionCard from "../components/MenSectionCard";
 import { useNavigate } from "react-router-dom";
@@ -32,6 +33,11 @@ const MenLanding: React.FC = () => {
     // Go to /products?category=anime|spartans|marvel
     navigate(`/products?category=${category}`);
   };
+
+  const goHome = () => {
+    navigate("/");
+  };
+
   return (
     <div
       className="min-h-screen w-full flex flex-col items-center justify-center"
@@ -55,6 +61,15 @@ const MenLanding: React.FC = () => {
           THOOK
         </div>
       </div>
+      {/* Home Button fixed in top right */}
+      <button
+        type="button"
+        onClick={goHome}
+        className="fixed top-4 right-5 z-50 bg-[#ffd600] hover:bg-[#ffec80] border-2 border-black text-black font-bold rounded px-5 py-2 transition-all shadow-lg text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-black"
+        aria-label="Go to homepage"
+      >
+        Home
+      </button>
       <section className="relative flex flex-col items-center w-full px-3">
         <h1 className="font-black text-4xl sm:text-5xl text-white tracking-[0.13em] mt-10 mb-7 drop-shadow-xl uppercase z-10">
           SELECT YOUR TYPE
@@ -76,3 +91,4 @@ const MenLanding: React.FC = () => {
 };
 
 export default MenLanding;
+
