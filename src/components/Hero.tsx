@@ -26,7 +26,7 @@ const Hero: React.FC = () => <section className="relative overflow-hidden min-h-
     {/* Center / brand */}
     <div className="w-full flex flex-col items-center mt-12 sm:mt-20 relative z-10">
       <span className="font-hero text-5xl sm:text-6xl font-black tracking-[0.14em] px-7 py-2 rounded bg-transparent text-black drop-shadow-md select-none">THOOK</span>
-      <span className="block font-black uppercase mt-4 sm:mt-7 text-[1.45em] sm:text-2xl tracking-[0.22em] text-black/95">THOOK ONLY FOR</span>
+      <span className="block font-black uppercase mt-4 sm:mt-7 text-[1.45em] sm:text-2xl tracking-[0.22em] text-black/95"> ONLY FOR</span>
     </div>
 
     {/* MEN Card only */}
