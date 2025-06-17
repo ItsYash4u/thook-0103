@@ -1,19 +1,17 @@
 
 import React from "react";
-import { Search, LogIn } from "lucide-react";
+import { LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
   const handleLoginClick = () => {
-    toast({
-      title: "Login Coming Soon!",
-      description: "Login/signup feature will be available soon.",
-    });
+    navigate('/login');
   };
 
   const handleWishlistClick = () => {
@@ -24,8 +22,7 @@ const Header = () => {
   };
 
   const handleCartClick = () => {
-    // Route to /products so cart can be used in main flow
-    navigate("/products");
+    navigate("/cart");
   };
 
   return (
@@ -37,19 +34,19 @@ const Header = () => {
             <Link to="/" className="hover:text-yellow-700 transition">THOOK</Link>
           </span>
         </div>
+        
         {/* Navigation */}
         <nav className="flex-1 flex justify-center space-x-8 ml-3">
           <Link to="/men" className="text-black font-semibold text-base hover:text-yellow-600 transition">MEN</Link>
         </nav>
-        {/* Search & Actions */}
-        <div className="flex items-center gap-4 ml-auto">
-          <div className="relative hidden md:block w-72">
-            <input
-              className="w-full h-10 px-10 pr-4 rounded bg-[#f6f6f6] border border-gray-200 placeholder:text-gray-500 text-sm focus:outline-yellow-400"
-              placeholder="Search by products"
-            />
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" size={20} />
-          </div>
+        
+        {/* Search Bar */}
+        <div className="flex-1 max-w-md mx-4">
+          <SearchBar />
+        </div>
+        
+        {/* Actions */}
+        <div className="flex items-center gap-4">
           <Button variant="ghost" className="text-black text-base font-bold px-2" onClick={handleLoginClick}>
             LOGIN
           </Button>
@@ -72,4 +69,3 @@ const Header = () => {
 };
 
 export default Header;
-

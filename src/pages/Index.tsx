@@ -2,6 +2,7 @@
 import Topbar from "../components/Topbar";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import BackgroundMusic from "../components/BackgroundMusic";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 
@@ -11,7 +12,6 @@ const bgImg =
 const Index = () => {
   const navigate = useNavigate();
 
-  // Add handler for full-card MEN navigation as extra fallback
   const goToMen = () => navigate("/men");
 
   return (
@@ -24,9 +24,9 @@ const Index = () => {
         backgroundPosition: "center",
       }}
     >
+      <BackgroundMusic />
       <Topbar />
       <Header />
-      {/* Wrap Hero in a div to allow whole MEN card click as fallback */}
       <div onClick={goToMen} style={{ cursor: "pointer" }}>
         <Hero />
       </div>
@@ -35,4 +35,3 @@ const Index = () => {
 };
 
 export default Index;
-

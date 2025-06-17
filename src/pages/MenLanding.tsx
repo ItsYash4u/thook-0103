@@ -1,6 +1,6 @@
-
 import React from "react";
 import MenSectionCard from "../components/MenSectionCard";
+import BackgroundMusic from "../components/BackgroundMusic";
 import { useNavigate } from "react-router-dom";
 
 const backgroundUrl =
@@ -25,12 +25,17 @@ const MEN_OPTIONS = [
     alt: "Marvel Section",
     category: "marvel",
   },
+  {
+    label: "Other",
+    image: "https://i.pinimg.com/736x/95/45/4a/95454a0bfb23e0ef73a1533f13c4c980.jpg",
+    alt: "Other Section",
+    category: "other",
+  },
 ];
 
 const MenLanding: React.FC = () => {
   const navigate = useNavigate();
   const goToCategory = (category: string) => {
-    // Go to /products?category=anime|spartans|marvel
     navigate(`/products?category=${category}`);
   };
 
@@ -49,6 +54,7 @@ const MenLanding: React.FC = () => {
         backgroundColor: "black",
       }}
     >
+      <BackgroundMusic />
       {/* Fixed brand name in top-left, style matches Header/HeroLogo */}
       <div className="fixed top-4 left-5 z-50 select-none pointer-events-none">
         <div
@@ -74,7 +80,7 @@ const MenLanding: React.FC = () => {
         <h1 className="font-black text-4xl sm:text-5xl text-white tracking-[0.13em] mt-10 mb-7 drop-shadow-xl uppercase z-10">
           SELECT YOUR TYPE
         </h1>
-        <div className="relative z-10 flex flex-col sm:flex-row gap-8 justify-center items-center w-full max-w-4xl py-8">
+        <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-6 justify-center items-center w-full max-w-6xl py-8">
           {MEN_OPTIONS.map((option) => (
             <MenSectionCard
               key={option.label}
@@ -91,4 +97,3 @@ const MenLanding: React.FC = () => {
 };
 
 export default MenLanding;
-
